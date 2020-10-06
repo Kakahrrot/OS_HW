@@ -218,7 +218,7 @@ int main(void)
 	printf("output size: %d\n", tc);
 	printf("caculated size: %lld\n", total);
 	*/
-	fclose(output);
+	free(array);
 	for(int i = 1; i <= k;i++)
 	{
 		int length = snprintf(NULL, 0, "%d", i);
