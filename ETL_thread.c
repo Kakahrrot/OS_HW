@@ -168,7 +168,6 @@ void* running(void* arg)
 	while(!stop)
 	{
 		counter++;
-		sleep(5);
 	}
 	pthread_exit(NULL);
 }

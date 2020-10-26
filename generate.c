@@ -2,7 +2,7 @@
 #include <stdlib.h> 
 //#define N 20
 //#define N 200000
-#define N 5000000
+#define N 5500000
 #define Max 50
 int main(void)
 {
