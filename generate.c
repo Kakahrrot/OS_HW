@@ -1,18 +1,18 @@
-#include <stdlib.h>
-#include <stdio.h> 
+#include <stdio.h>
+#include <stdlib.h> 
+//#define N 20
+//#define N 200000
+#define N 5000000
+#define Max 50
 int main(void)
 {
- 	//printf("%d\n", RAND_MAX);
-	FILE* fp = fopen("input.txt", "w");
-	long long int size = (long long int) 1024 * 1024 * 1024 / 4 * 1.5 ;
-	for(int i = 0; i < size; i++)
-	//for(int i = 0; i < 1024; i++)
+ 	FILE *fp = fopen("input.csv", "w");
+	for(int i = 0; i < N; i++)
 	{
-		int a = rand();
-		if(rand()%2)
-			a = -a;
-	 	fprintf(fp, "%d\n", a);
+		fprintf(fp, "%d", rand());
+		for(int j = 1;j < 20;j++)
+			fprintf(fp, "|%d", rand());
+		fprintf(fp, "\n");
 	}
-	printf("size: %lld\n", size);
-	return 0;
+	fclose(fp);
 }

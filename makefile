@@ -1,6 +1,3 @@
-all: opt.c Bench.c generate.c
-	gcc -o opt opt.c
-	gcc -o Bench Bench.c
+all:
 	gcc -o generate generate.c
-clear:
-	rm input.txt output.txt sort generate 
+	gcc -o ETL_thread ETL_thread.c -lpthread
